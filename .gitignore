@@ -9,8 +9,8 @@ venv/
 env/
 *.egg-info/
 
-# SQLite DB (ephemeral on Render — re-seeded on startup)
-backend/instance/
+# SQLite DB — committed to repo so Render uses the pre-seeded, correct DB
+# backend/instance/
 
 # Node
 frontend/node_modules/
