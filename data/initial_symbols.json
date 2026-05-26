@@ -1,0 +1,5 @@
+[
+  {"name":"Механізована піхота","category":"Сухопутні підрозділи","image_path":"/static/symbols/infantry.svg"},
+  {"name":"Танковий підрозділ","category":"Сухопутні підрозділи","image_path":"/static/symbols/tank.svg"},
+  {"name":"Підрозділ противника","category":"Противник","image_path":"/static/symbols/enemy.svg"}
+]

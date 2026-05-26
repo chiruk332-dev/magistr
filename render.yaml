@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: tactical-symbols
+    runtime: python
+    buildCommand: >-
+      pip install -r backend/requirements.txt &&
+      npm ci --prefix frontend &&
+      npm run build --prefix frontend
+    startCommand: >-
+      gunicorn -w 1 --threads 2
+      -b 0.0.0.0:$PORT
+      --chdir backend
+      "app.main:create_app()"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.11"

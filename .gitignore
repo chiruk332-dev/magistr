@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+
+# SQLite DB (ephemeral on Render — re-seeded on startup)
+backend/instance/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env files (keep .env.development but not .env.local or secrets)
+.env.local
+.env.production.local
+frontend/.env.local
