@@ -79,7 +79,9 @@ def _load_catalog() -> list[dict]:
 def _reset_symbol_catalog(catalog: list[dict]) -> None:
     expected = len(catalog)
     existing = Symbol.query.count()
-    if existing == expected:
+    expected_cats = {item['category'] for item in catalog}
+    existing_cats = {c.name for c in Category.query.all()}
+    if existing == expected and expected_cats == existing_cats:
         return
     Answer.query.delete()
     Question.query.delete()
